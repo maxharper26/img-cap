@@ -1,0 +1,28 @@
+
+- start EC2 linux
+- sudo install python and git
+- put flask in git and then clone in ec2 terminal using "connect button"
+- must use CUSTOM TCP port 5000 0.0.0.0/0 and then can connect using http://publicIP:5000 in browser
+- make sure ssh 22 0.0.0.0/0 allowed for EC2 connect
+
+
+S3: uncheck block all access and
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::img-cap-bucket/*"
+        },
+        {
+            "Sid": "PublicWritePutObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:PutObject",
+            "Resource": "arn:aws:s3:::img-cap-bucket/*"
+        }
+    ]
+}
