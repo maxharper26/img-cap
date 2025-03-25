@@ -29,7 +29,7 @@ import base64  # Encoding image data for API processing
 from io import BytesIO  # Handling in-memory file objects
 
 # Configure Gemini API, REPLACE with your Gemini API key
-GOOGLE_API_KEY = "AIzaSyBr4vIP8CC4O4H9Ci9o77EQ8d1hNeguRtM"
+GOOGLE_API_KEY = ""
 genai.configure(api_key=GOOGLE_API_KEY)
 
 # Choose a Gemini model for generating captions
@@ -58,7 +58,7 @@ def generate_image_caption(image_data):
 app = Flask(__name__)
 
 # AWS S3 Configuration, REPLACE with your S3 bucket
-S3_BUCKET = "img-cap-bucket"
+S3_BUCKET = ""
 S3_REGION = "us-east-1"
 
 
@@ -67,10 +67,10 @@ def get_s3_client():
     return boto3.client("s3", region_name=S3_REGION)
 
 # Database Configuration, REPLACE with your RDS credentials
-DB_HOST = "img-cap-db.cok09jva1t60.us-east-1.rds.amazonaws.com"
-DB_NAME = "image_caption_db"
-DB_USER = "admin"
-DB_PASSWORD = "image-caption-password"
+DB_HOST = ""
+DB_NAME = ""
+DB_USER = ""
+DB_PASSWORD = ""
 
 def get_db_connection():
     """

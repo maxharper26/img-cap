@@ -26,3 +26,8 @@ S3: uncheck block all access and
         }
     ]
 }
+
+also attatch s3 access role to ec2
+
+connect RDS to existing ec2.
+then run sh create-database.sh

@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # RDS connection details
-DB_HOST="img-cap-db.cok09jva1t60.us-east-1.rds.amazonaws.com"           # Replace with your RDS endpoint
-DB_USER="admin"           # Your RDS admin username
-DB_PASSWORD="image-caption-password"       # Your RDS password
+DB_HOST=""           # Replace with your RDS endpoint
+DB_USER=""           # Your RDS admin username
+DB_PASSWORD=""       # Your RDS password
 SQL_COMMANDS=$(cat <<EOF
 /*
   Database Creation Script for the Image Captioning App
